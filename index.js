@@ -14,6 +14,9 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+});
 
 async function modelCalled() {
     await mongoose.connect(process.env.DATABASE_URL)
