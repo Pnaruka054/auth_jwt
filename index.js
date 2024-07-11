@@ -14,7 +14,19 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
-app.get('/*', (req, res) => {
+app.get('/Verify', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+});
+app.get('/signUp', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+});
+app.get('/forgot-password', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+});
+app.get('/Home', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+});
+app.get('/UpdatePassword/:id', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
 
